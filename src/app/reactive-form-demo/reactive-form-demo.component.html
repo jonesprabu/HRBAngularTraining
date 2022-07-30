@@ -1,9 +1,10 @@
 <div class="container">
-    <form [FormGroup]="exform">
+    <form [formGroup]="exform" (ngSubmit)="onSubmit(exform)">
 
         <p>
             <label>Name
                 <input formControlName="name" type="text" name="customer_name" required>
+                <small *ngIf="exform.get('name').invalid && exform.get('name').touched" class="dark-danger">Name is required</small> 
             </label>
         </p>
 
@@ -21,33 +22,33 @@
 
         <fieldset>
             <legend>Which taxi do you require?</legend>
-            <p><label class="choice"> <input type="radio" name="taxi" required value="car"> Car </label></p>
-            <p><label class="choice"> <input type="radio" name="taxi" required value="van"> Van </label></p>
-            <p><label class="choice"> <input type="radio" name="taxi" required value="tuktuk"> Tuk Tuk </label></p>
+            <p><label  class="choice"> <input type="radio" formControlName="ch"  required value="car"> Car </label></p>
+            <p><label  class="choice"> <input type="radio" formControlName="ch" required value="van"> Van </label></p>
+            <p><label  class="choice"> <input type="radio" formControlName="ch" required value="tuktuk"> Tuk Tuk </label></p>
         </fieldset>
 
         <fieldset>
             <legend>Extras</legend>
-            <p><label class="choice"> <input type="checkbox" name="extras" value="baby"> Baby Seat </label></p>
-            <p><label class="choice"> <input type="checkbox" name="extras" value="wheelchair"> Wheelchair Access
+            <p><label  class="choice"> <input type="checkbox" formControlName="choose" name="extras" value="baby"> Baby Seat </label></p>
+            <p><label  class="choice"> <input type="checkbox" formControlName="choose" name="extras" value="wheelchair"> Wheelchair Access
                 </label>
             </p>
-            <p><label class="choice"> <input type="checkbox" name="extras" value="tip"> Stock Tip </label></p>
+            <p><label  class="choice"> <input type="checkbox" formControlName="choose" name="extras" value="tip"> Stock Tip </label></p>
         </fieldset>
 
         <p>
             <label>Pickup Date/Time
-                <input formControlName="pickuptime" type="datetime-local" name="pickup_time" required>
+                <input   type="datetime-local" formControlName="date" required>
             </label>
         </p>
 
         <p>
             <label>Pickup Place
-                <select id="pickup_place" name="pickup_place">
-                    <option value="" selected="selected">Select One</option>
+                <select id="pickup_place" formControlName="pickup" >
+                    <option  value="" selected="selected">Select One</option>
                     <option value="office">Taxi Office</option>
                     <option value="town_hall">Town Hall</option>
-                    <option value="call_and_check">Call and Check</option>
+                    <option  value="call_and_check">Call and Check</option>
                 </select>
             </label>
         </p>
@@ -55,11 +56,11 @@
         <p>
             <label>Dropoff Place
                 <!--<input type="text" name="dropoff_place" required list="destinations">-->
-                <select id="dropoff_place" name="dropoff_place">
-                    <option value="" selected="selected">Select One</option>
-                    <option value="airpot">Airport</option>
+                <select id="dropoff_place" formControlName="drop">
+                    <option  value="" selected="selected">Select One</option>
+                    <option  value="airpot">Airport</option>
                     <option value="beach">Beach</option>
-                    <option value="call_and_check">Fred Flinstone's House</option>
+                    <option  value="call_and_check">Fred Flinstone's House</option>
                 </select>
             </label>
 
@@ -72,7 +73,7 @@
 
         <p>
             <label>Special Instructions
-                <textarea formControlName="instructions" name="comments" maxlength="500"></textarea>
+                <textarea formControlName="instructions"  maxlength="500"></textarea>
             </label>
         </p>
 
@@ -95,18 +96,22 @@
                 <th></th>
             </thead>
             <tbody>
-                <td>1</td>
-                <td>Jones</td>
-                <td>123456789</td>
-                <td>jj@jp.com</td>
-                <td>car</td>
-                <td>baby</td>
-                <td>07/29/2022 10:06 PM</td>
-                <td>call_and_check</td>
-                <td>airpot</td>
-                <td>Please call me an hour before the pickup time to know the pick up location</td>
-                <td><button>Edit</button></td>
-            </tbody>
+         
+<tr *ngFor=" let cus of cusList">
+ <td>{{cus.id}}</td>
+ <td>{{cus.name}}</td>
+ <td>{{cus.phone}}</td>
+ <td>{{cus.email}}</td>
+ <td>{{cus.ch}}</td>
+ <td>{{cus.choose}}</td>
+ <td>{{cus.date}}</td>
+ <td>{{cus.pickup}}</td>
+ <td>{{cus.drop}}</td>
+ <td>{{cus.instructions}}</td>
+ 
+ </tr>
+
+
         </table>
     </div>
 </div>
