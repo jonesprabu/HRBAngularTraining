@@ -1,7 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ReactiveFormDemoComponent } from './reactive-form-demo/reactive-form-demo.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: 'demoform',
+    component: ReactiveFormDemoComponent
+    }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
