@@ -1,0 +1,44 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "customers":[
+    {
+    "Name":"Jones",
+    "Phone":"123456789",
+    "Email":"jj@jp.com",
+    "TaxiType":"car",
+    "Extras": "baby",
+    "PickupDateTime":"07/29/2022 10:06 PM",
+    "PickupPlace":"call_and_check",
+    "DropoffPlace":"airpot",
+    "SpecialInstructions":"Please call me an hour before the pickup time to know the pick up location"
+    },
+    {
+    "Name":"Reshma",
+    "Phone":"123456789",
+    "Email":"rr@jp.com",
+    "TaxiType":"car",
+    "Extras": "baby",
+    "PickupDateTime":"07/29/2022 12:06 PM",
+    "PickupPlace":"call_and_check",
+    "DropoffPlace":"airpot",
+    "SpecialInstructions":"Please call me"
+    }
+]
+
+}
