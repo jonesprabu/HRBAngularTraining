@@ -1,0 +1,38 @@
+{
+  "booking": [
+    {
+      "name": "Richard",
+      "phone": "8086873137",
+      "email": "s@gmail.com",
+      "taxi": "car",
+      "extra": {
+        "name": "Richard",
+        "phone": "8086873137",
+        "email": "s@gmail.com",
+        "taxi": "car",
+        "extra": true,
+        "dateTime": "2022-07-19T17:34",
+        "pikupPlace": "office",
+        "dropoffPlace": "beach",
+        "instructions": "reach 5min early"
+      },
+      "dateTime": "2022-07-19T17:34",
+      "pikupPlace": "office",
+      "dropoffPlace": "beach",
+      "instructions": "reach 5min early",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "",
+      "phone": 0,
+      "email": "",
+      "taxi": "",
+      "extra": "",
+      "dateTime": "",
+      "pikupPlace": "",
+      "dropoffPlace": "",
+      "instructions": ""
+    }
+  ]
+}

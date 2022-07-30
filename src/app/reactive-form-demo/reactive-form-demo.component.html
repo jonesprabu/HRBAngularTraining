@@ -1,52 +1,53 @@
 <div class="container">
-    <form class="myForm" method="get" enctype="application/x-www-form-urlencoded"
-        action="/html/codes/html_form_handler.cfm">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)" 
+    class="myForm" method="get" enctype="application/x-www-form-urlencoded"
+        action="/html/codes/html_form_handler.cfm" >
 
         <p>
-            <label>Name
-                <input type="text" name="customer_name" required>
+            <label>Name:
+                <input type="text" formControlName="name" name="customer_name" required>
             </label>
         </p>
 
         <p>
             <label>Phone
-                <input type="tel" name="phone_number">
+                <input type="tel" formControlName="phone" name="phone_number">
             </label>
         </p>
 
         <p>
             <label>Email
-                <input type="email" name="email_address">
+                <input type="email" formControlName="email" name="email_address">
             </label>
         </p>
 
         <fieldset>
             <legend>Which taxi do you require?</legend>
-            <p><label class="choice"> <input type="radio" name="taxi" required value="car"> Car </label></p>
-            <p><label class="choice"> <input type="radio" name="taxi" required value="van"> Van </label></p>
-            <p><label class="choice"> <input type="radio" name="taxi" required value="tuktuk"> Tuk Tuk </label></p>
+            <p><label class="choice"> <input type="radio" formControlName="taxi" name="taxi" required value="car"> Car </label></p>
+            <p><label class="choice"> <input type="radio" formControlName="taxi" name="taxi" required value="van"> Van </label></p>
+            <p><label class="choice"> <input type="radio" formControlName="taxi" name="taxi" required value="tuktuk"> Tuk Tuk </label></p>
         </fieldset>
 
         <fieldset>
             <legend>Extras</legend>
-            <p><label class="choice"> <input type="checkbox" name="extras" value="baby"> Baby Seat </label></p>
-            <p><label class="choice"> <input type="checkbox" name="extras" value="wheelchair"> Wheelchair Access
+            <p><label class="choice"> <input type="checkbox" formControlName="extra" name="extra" value="baby"> Baby Seat </label></p>
+            <p><label class="choice"> <input type="checkbox" formControlName="extra" name="extra" value="wheelchair"> Wheelchair Access
                 </label>
             </p>
-            <p><label class="choice"> <input type="checkbox" name="extras" value="tip"> Stock Tip </label></p>
+            <p><label class="choice"> <input type="checkbox" formControlName="extra" name="extra" value="tip"> Stock Tip </label></p>
         </fieldset>
 
         <p>
             <label>Pickup Date/Time
-                <input type="datetime-local" name="pickup_time" required>
+                <input type="datetime-local" formControlName="dateTime" name="pickup_time" required>
             </label>
         </p>
 
         <p>
             <label>Pickup Place
-                <select id="pickup_place" name="pickup_place">
+                <select id="pickup_place" formControlName="pikupPlace" name="pickupPlace">
                     <option value="" selected="selected">Select One</option>
-                    <option value="office">Taxi Office</option>
+                    <option value=" Taxi office">Taxi Office</option>
                     <option value="town_hall">Town Hall</option>
                     <option value="call_and_check">Call and Check</option>
                 </select>
@@ -56,11 +57,11 @@
         <p>
             <label>Dropoff Place
                 <!--<input type="text" name="dropoff_place" required list="destinations">-->
-                <select id="dropoff_place" name="dropoff_place">
+                <select id="dropoff_place" formControlName="dropoffPlace" name="dropoff_place">
                     <option value="" selected="selected">Select One</option>
-                    <option value="airpot">Airport</option>
+                    <option value="airport">Airport</option>
                     <option value="beach">Beach</option>
-                    <option value="call_and_check">Fred Flinstone's House</option>
+                    <option value="Fred Flinstone House">Fred Flinstone's House</option>
                 </select>
             </label>
 
@@ -73,11 +74,11 @@
 
         <p>
             <label>Special Instructions
-                <textarea name="comments" maxlength="500"></textarea>
+                <textarea formControlName="instructions" name="comments" maxlength="500"></textarea>
             </label>
         </p>
 
-        <p><button>Submit Booking</button></p>
+        <p><button type="submit">Submit Booking</button></p>
 
     </form>
     <div class="bookings">
@@ -95,18 +96,20 @@
                 <th>Special Instructions</th>
                 <th></th>
             </thead>
-            <tbody>
-                <td>1</td>
-                <td>Jones</td>
-                <td>123456789</td>
-                <td>jj@jp.com</td>
-                <td>car</td>
-                <td>baby</td>
-                <td>07/29/2022 10:06 PM</td>
-                <td>call_and_check</td>
-                <td>airpot</td>
-                <td>Please call me an hour before the pickup time to know the pick up location</td>
-                <td><button>Edit</button></td>
+            <tbody>             
+                <tr *ngFor="let detail of result">
+                    <td>{{ detail.id}} </td>
+                    <td>{{ detail.name }} </td>
+                    <td>{{ detail.phone }}</td>      
+                    <td>{{ detail.email }}</td>
+                    <td>{{ detail.taxi}} </td>
+                    <td>{{ detail.extra}} </td>
+                    <td>{{ detail.dateTime}} </td>
+                    <td>{{ detail.pikupPlace}} </td>
+                    <td>{{ detail.dropoffPlace}} </td>
+                    <td>{{ detail.instructions}} </td>
+                    <td><button (click)="Edit(detail.id)">Edit</button></td>
+              </tr>
             </tbody>
         </table>
     </div>
