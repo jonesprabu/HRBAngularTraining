@@ -1,0 +1,68 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "custDetails": [
+    {
+      "customer_name": "Sreedevi",
+      "phone_number": "9895685432",
+      "email_address": "sreedevi169@gmail.com",
+      "id": 1,
+      "taxi": "car",
+      "pickup_time": "",
+      "pickup_place": "town_hall",
+      "dropoff_place": "airpot",
+      "comments": ""
+    },
+    {
+      "customer_name": "Lilly",
+      "phone_number": "9786578952",
+      "email_address": "lilly497@gmail.com",
+      "id": 2,
+      "taxi": "car",
+      "extras": true,
+      "pickup_time": "2022-07-30T15:18",
+      "pickup_place": "town_hall",
+      "dropoff_place": "airpot",
+      "comments": "hi"
+    },
+    {
+      "customer_name": "Ritha",
+      "phone_number": "8765490876",
+      "email_address": "asfcg123@gmail.com",
+      "id": 3,
+      "taxi": "car",
+      "extras": true,
+      "pickup_time": "2022-07-31T08:36",
+      "pickup_place": "office",
+      "dropoff_place": "beach",
+      "comments": "hello"
+    },
+    {
+      "customer_name": "Radha",
+      "phone_number": "7869543289",
+      "email_address": "radha679@gmail.com",
+      "id": 4,
+      "taxi": "tuktuk",
+      "extras": true,
+      "pickup_time": "2022-07-30T16:02",
+      "pickup_place": "town_hall",
+      "dropoff_place": "airpot",
+      "comments": "hi"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

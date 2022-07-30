@@ -1,50 +1,57 @@
 <div class="container">
     <form class="myForm" method="get" enctype="application/x-www-form-urlencoded"
-        action="/html/codes/html_form_handler.cfm">
+        action="/html/codes/html_form_handler.cfm" [formGroup]="MyForm" (ngSubmit)="onSubmit(MyForm)">
 
         <p>
             <label>Name
-                <input type="text" name="customer_name" required>
+                <input type="text" formControlName="customer_name" required>
             </label>
+            
         </p>
+        <!-- <div *ngIf="customer_name.errors?.['required']">
+            Name is required.
+            <label>Name
+                <input type="text" formControlName="customer_name" required>
+            </label>
+        </div> -->
 
         <p>
             <label>Phone
-                <input type="tel" name="phone_number">
+                <input type="tel" formControlName="phone_number">
             </label>
         </p>
 
         <p>
             <label>Email
-                <input type="email" name="email_address">
+                <input type="email" formControlName="email_address">
             </label>
         </p>
 
-        <fieldset>
+        <fieldset>taxi
             <legend>Which taxi do you require?</legend>
-            <p><label class="choice"> <input type="radio" name="taxi" required value="car"> Car </label></p>
-            <p><label class="choice"> <input type="radio" name="taxi" required value="van"> Van </label></p>
-            <p><label class="choice"> <input type="radio" name="taxi" required value="tuktuk"> Tuk Tuk </label></p>
+            <p><label class="choice"> <input type="radio" formControlName="taxi" required value="car"> Car </label></p>
+            <p><label class="choice"> <input type="radio" formControlName="taxi" required value="van"> Van </label></p>
+            <p><label class="choice"> <input type="radio" formControlName="taxi" required value="tuktuk"> Tuk Tuk </label></p>
         </fieldset>
 
         <fieldset>
             <legend>Extras</legend>
-            <p><label class="choice"> <input type="checkbox" name="extras" value="baby"> Baby Seat </label></p>
-            <p><label class="choice"> <input type="checkbox" name="extras" value="wheelchair"> Wheelchair Access
+            <p><label class="choice"> <input type="checkbox" formControlName="extras" value="baby"> Baby Seat </label></p>
+            <p><label class="choice"> <input type="checkbox" formControlName="extras" value="wheelchair"> Wheelchair Access
                 </label>
             </p>
-            <p><label class="choice"> <input type="checkbox" name="extras" value="tip"> Stock Tip </label></p>
+            <p><label class="choice"> <input type="checkbox" formControlName="extras" value="tip"> Stock Tip </label></p>
         </fieldset>
 
         <p>
             <label>Pickup Date/Time
-                <input type="datetime-local" name="pickup_time" required>
+                <input type="datetime-local" formControlName="pickup_time" required>
             </label>
         </p>
 
         <p>
             <label>Pickup Place
-                <select id="pickup_place" name="pickup_place">
+                <select id="pickup_place" formControlName="pickup_place">
                     <option value="" selected="selected">Select One</option>
                     <option value="office">Taxi Office</option>
                     <option value="town_hall">Town Hall</option>
@@ -56,7 +63,7 @@
         <p>
             <label>Dropoff Place
                 <!--<input type="text" name="dropoff_place" required list="destinations">-->
-                <select id="dropoff_place" name="dropoff_place">
+                <select id="dropoff_place" formControlName="dropoff_place">
                     <option value="" selected="selected">Select One</option>
                     <option value="airpot">Airport</option>
                     <option value="beach">Beach</option>
@@ -73,11 +80,11 @@
 
         <p>
             <label>Special Instructions
-                <textarea name="comments" maxlength="500"></textarea>
+                <textarea formControlName="comments" maxlength="500"></textarea>
             </label>
         </p>
 
-        <p><button>Submit Booking</button></p>
+        <p><button type="submit">Submit Booking</button></p>
 
     </form>
     <div class="bookings">
@@ -107,6 +114,19 @@
                 <td>airpot</td>
                 <td>Please call me an hour before the pickup time to know the pick up location</td>
                 <td><button>Edit</button></td>
+            </tbody>
+            <tbody *ngFor="let data of customerList">
+                <td>{{data.id}}</td>
+                <td>{{data.customer_name}}</td>
+                <td>{{data.phone_number}}</td>
+                <td>{{data.email_address}}</td>
+                <td>{{data.taxi}}</td>
+                <td>{{data.extras}}</td>
+                <td>{{data.pickup_time}}</td>
+                <td>{{data.pickup_place}}</td>
+                <td>{{data.dropoff_place}}</td>
+                <td>{{data.comments}}</td>
+                
             </tbody>
         </table>
     </div>
