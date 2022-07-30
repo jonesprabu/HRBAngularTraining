@@ -1,22 +1,21 @@
 <div class="container">
-    <form class="myForm" method="get" enctype="application/x-www-form-urlencoded"
-        action="/html/codes/html_form_handler.cfm">
+    <form [FormGroup]="exform">
 
         <p>
             <label>Name
-                <input type="text" name="customer_name" required>
+                <input formControlName="name" type="text" name="customer_name" required>
             </label>
         </p>
 
         <p>
             <label>Phone
-                <input type="tel" name="phone_number">
+                <input formControlName="phone" type="tel" name="phone_number">
             </label>
         </p>
 
         <p>
             <label>Email
-                <input type="email" name="email_address">
+                <input formControlName="email" type="email" name="email_address">
             </label>
         </p>
 
@@ -38,7 +37,7 @@
 
         <p>
             <label>Pickup Date/Time
-                <input type="datetime-local" name="pickup_time" required>
+                <input formControlName="pickuptime" type="datetime-local" name="pickup_time" required>
             </label>
         </p>
 
@@ -73,7 +72,7 @@
 
         <p>
             <label>Special Instructions
-                <textarea name="comments" maxlength="500"></textarea>
+                <textarea formControlName="instructions" name="comments" maxlength="500"></textarea>
             </label>
         </p>
 
