@@ -1,0 +1,45 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "custDetails": [
+    {
+      "id": 1,
+      "email_address": "krishnasajeev30@gmail.com",
+      "customer_name": "Krishna",
+      "phone_number": "7907289112",
+      "taxi": "tuktuk",
+      "extras": true,
+      "pickup_time": "2022-07-30T16:35",
+      "pickup_place": "call_and_check",
+      "dropoff_place": "airpot",
+      "comments": "Hi"
+    },
+    {
+      "id": 2,
+      "email_address": "sajna.xia@gmail.com",
+      "customer_name": "Sajna",
+      "phone_number": "9207398792",
+      "taxi": "van",
+      "extras": true,
+      "pickup_time": "2022-07-30T16:45",
+      "pickup_place": "office",
+      "dropoff_place": "call_and_check",
+      "comments": "Hello"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
