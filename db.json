@@ -1,0 +1,40 @@
+{
+  "customers": [
+    {
+      "id": 0,
+      "name": "",
+      "phone": "",
+      " email": "",
+      "ch": "",
+      "choose": "",
+      "date": "",
+      "pickup": "",
+      "drop": "",
+      "instructions": ""
+    },
+    {
+      "id": 1,
+      "name": "",
+      "phone": null,
+      "email": null,
+      "ch": null,
+      "choose": null,
+      "date": "",
+      "pickup": null,
+      "drop": null,
+      "instructions": null
+    },
+    {
+      "id": 2,
+      "name": "Juby",
+      "phone": "124245",
+      "email": "djnsjhfb",
+      "ch": "van",
+      "choose": true,
+      "date": "",
+      "pickup": "office",
+      "drop": "call_and_check",
+      "instructions": "fvdf"
+    }
+  ]
+}
