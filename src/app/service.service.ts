@@ -28,7 +28,4 @@ export class ServiceService {
   getCustList(): Observable<any> {
       return this.http.get('http://localhost:3000/custDetails');
      }
-  updateEmployee(employee: any):Observable<any> {
-      return this.http.put('http://localhost:3000/employees/'+employee.id, employee);
-  }
 }
