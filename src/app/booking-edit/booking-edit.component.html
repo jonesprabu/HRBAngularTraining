@@ -1,5 +1,5 @@
 <div class="container">
-    <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)" class="myForm">
+    <form (ngSubmit)="updateEmployeeDetails()" class="myForm">
 
         <p>
             <label>Name
@@ -77,7 +77,7 @@
         <p><button type="submit" onClick="window.location.reload();">Submit Booking</button></p>
 
     </form>
-    <div class="bookings">
+    <!-- <div class="bookings">
         <table class="booking-list">
             <thead>
                 <th>Booking ID</th>
@@ -108,6 +108,6 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
 </div>
 

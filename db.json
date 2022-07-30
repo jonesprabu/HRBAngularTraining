@@ -1,0 +1,43 @@
+{
+  "bookings": [
+    {
+      "id": 1,
+      "customer_name": "Jones",
+      "phone_number": 123456789,
+      "email_address": "jj@jp.com",
+      "taxi": "car",
+      "extras": "baby",
+      "pickup_time": "07/29/2022 10:06 PM",
+      "pickup_place": "call_and_check",
+      "dropoff_place": "airpot",
+      "comments": "Please call me an hour before the pickup time to know the pick up location"
+    },
+    {
+      "id": 2,
+      "customer_name": "shobith",
+      "phone_number": "2255",
+      "email_address": "ss@gmail.com",
+      "taxi": "car",
+      "extras": " baby",
+      "pickup_time": "2022-07-30T17:07",
+      "pickup_place": "office",
+      "dropoff_place": "airpot",
+      "comments": "asdfgh"
+    },
+    {
+      "id": 3,
+      "customer_name": "shobith",
+      "phone_number": "123456789",
+      "email_address": "sss",
+      "taxi": "car",
+      "extras": " Baby_Seat Stock_Tip",
+      "pickup_time": "2022-07-30T18:09",
+      "pickup_place": "office",
+      "dropoff_place": "airpot",
+      "comments": "asdfghj"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
