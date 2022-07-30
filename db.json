@@ -1,0 +1,52 @@
+{
+  "customers": [
+    {
+      "id": 0,
+      "name": "",
+      "phone": "",
+      " email": "",
+      "ch": "",
+      "choose": "",
+      "date": "",
+      "pickup": "",
+      "drop": "",
+      "instructions": ""
+    },
+    {
+      "id": 1,
+      "name": "",
+      "phone": null,
+      "email": null,
+      "ch": null,
+      "choose": null,
+      "date": "",
+      "pickup": null,
+      "drop": null,
+      "instructions": null
+    },
+    {
+      "id": 2,
+      "name": "Anagha",
+      "phone": "983274574",
+      "email": "anagha@mail.com",
+      "ch": "car",
+      "choose": true,
+      "date": "",
+      "pickup": "office",
+      "drop": "airpot",
+      "instructions": "speed"
+    },
+    {
+      "id": 3,
+      "name": "Anagha",
+      "phone": "983274574",
+      "email": "anagha@mail.com",
+      "ch": "car",
+      "choose": true,
+      "date": "",
+      "pickup": "office",
+      "drop": "airpot",
+      "instructions": "speed"
+    }
+  ]
+}
