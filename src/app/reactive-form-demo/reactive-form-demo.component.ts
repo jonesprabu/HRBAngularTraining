@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-form-demo',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReactiveFormDemoComponent implements OnInit {
 
-  constructor() { }
+  myForm: FormGroup;
+  constructor(private forms:FormBuilder) { }
 
   ngOnInit(): void {
+    this.myForm
   }
 
 }

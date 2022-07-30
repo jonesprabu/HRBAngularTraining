@@ -1,6 +1,8 @@
 <div class="container">
-    <form class="myForm" method="get" enctype="application/x-www-form-urlencoded"
-        action="/html/codes/html_form_handler.cfm">
+    <!-- <form class="myForm" method="get" enctype="application/x-www-form-urlencoded"
+        action="/html/codes/html_form_handler.cfm"> -->
+
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
 
         <p>
             <label>Name
