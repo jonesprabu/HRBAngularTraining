@@ -1,0 +1,56 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "custDetails": [
+    {
+      "customer_name": "sara",
+      "phone_number": "1234567890",
+      "email_address": "asd@gmail.com",
+      "taxi": "car",
+      "extras": "",
+      "pickuptime": "",
+      "pickup_place": "office",
+      "dropoff_place": "beach",
+      "id": 1,
+      "comments": ""
+    },
+    {
+      "customer_name": "anjana",
+      "phone_number": "244678543",
+      "email_address": "fghkkl@gmail.com",
+      "taxi": "car",
+      "extras": true,
+      "pickuptime": "",
+      "pickup_place": "office",
+      "dropoff_place": "airpot",
+      "id": 2,
+      "comments": ""
+    },
+    {
+      "id": 3,
+      "customer_name": "Krishna",
+      "phone_number": "0987654321",
+      "email_address": "nfjk@jdhj.com",
+      "taxi": "tuktuk",
+      "pickup_place": "town_hall",
+      "dropoff_place": "beach",
+      "comments": "",
+      "extras": true
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
