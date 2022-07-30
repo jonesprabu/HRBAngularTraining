@@ -60,6 +60,18 @@
       "pickup_place": "town_hall",
       "dropoff_place": "airpot",
       "comments": "hi"
+    },
+    {
+      "customer_name": "Neenu",
+      "phone_number": "9868964256",
+      "email_address": "neenu534@gmail.com",
+      "id": 5,
+      "taxi": "car",
+      "extras": true,
+      "pickup_time": "2022-07-30T09:25",
+      "pickup_place": "call_and_check",
+      "dropoff_place": "airpot",
+      "comments": "hi"
     }
   ],
   "profile": {
