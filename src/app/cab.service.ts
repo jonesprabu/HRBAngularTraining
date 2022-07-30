@@ -26,8 +26,12 @@ export class CabService {
   }
   getCusDet(): Observable<any>
   {
-      console.log("service getEmployeeList called");
+      console.log("service CustomerList called");
       return this.http.get('http://localhost:3000/customers');
+  }
+  editCusDet(sid:number):Observable<any>{
+    return this.http.get('http://localhost:3000/customers/'+sid);
+
   }
   
  

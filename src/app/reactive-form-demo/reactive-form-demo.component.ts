@@ -15,6 +15,10 @@ export class ReactiveFormDemoComponent implements OnInit {
   exform!:FormGroup;
   cab:BookingCab=new BookingCab;
   cusList:BookingCab[]=[];
+  cid:number=0;
+  cab1:BookingCab=new BookingCab;
+
+
 
   constructor(private NewCus:CabService,private router:Router){}
 
@@ -64,5 +68,18 @@ export class ReactiveFormDemoComponent implements OnInit {
     })
 
   }
+
+editDet(id:number){
+
+  this.cid=id;
+  this.NewCus.editCusDet(this.cid).subscribe((data:BookingCab)=>{
+    this.cab1=data;
+    console.log("entered")
+
+  })
+
+
+}
+  
   
   }
