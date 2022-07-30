@@ -4,8 +4,8 @@ import { BookingEditComponent } from './booking-edit/booking-edit.component';
 
 const routes: Routes = [
   {
-    path: 'showBookingEditForm/:id',
-    component: BookingEditComponent
+     path: 'showBookingEditForm/:id',
+     component: BookingEditComponent
   }
 ];
 
