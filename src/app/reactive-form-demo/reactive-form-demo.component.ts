@@ -77,9 +77,34 @@ editDet(id:number){
     console.log("entered")
 
   })
+  this.exform.patchValue({
+
+    comments:this.cab1.instructions,
+
+    email_address: this.cab1.email,
+
+    customer_name: this.cab1.name,
+
+    taxi:this.cab1.ch,
+
+    pickup_place:this.cab1.pickup,
+
+    extras:this.cab1.choose,
+
+    dropoff_place:this.cab1.drop,
+
+    phone_number:this.cab1.phone,
+
+
+
+
+
+  });
+
 
 
 }
+
   
   
   }
