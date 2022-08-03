@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { BookingService } from './booking.service';
 import { ReactiveFormDemoComponent } from './reactive-form-demo/reactive-form-demo.component';
 import { BookingEditComponent } from './booking-edit/booking-edit.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { BookingEditComponent } from './booking-edit/booking-edit.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   providers: [BookingService],
   bootstrap: [AppComponent]
